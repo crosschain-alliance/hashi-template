@@ -1,19 +1,8 @@
-## Foundry
+## Hashi template - Foundry edition
 
-**Foundry is a blazing fast, portable and modular toolkit for Ethereum application development written in Rust.**
+This folder demonstrates a basic use case for Hashi using Foundry. For more details about Foundry, see their [documentation](https://book.getfoundry.sh/getting-started/first-steps).
 
-Foundry consists of:
-
--   **Forge**: Ethereum testing framework (like Truffle, Hardhat and DappTools).
--   **Cast**: Swiss army knife for interacting with EVM smart contracts, sending transactions and getting chain data.
--   **Anvil**: Local Ethereum node, akin to Ganache, Hardhat Network.
--   **Chisel**: Fast, utilitarian, and verbose solidity REPL.
-
-## Documentation
-
-https://book.getfoundry.sh/
-
-## Usage
+# Develoment
 
 ### Build
 
@@ -47,8 +36,10 @@ $ anvil
 
 ### Deploy
 
+Configure parameters in .env. Run script
+
 ```shell
-$ forge script script/Counter.s.sol:CounterScript --rpc-url <your_rpc_url> --private-key <your_private_key>
+$ forge script script/$ContractName.s.sol: --rpc-url <your_rpc_url> --private-key <your_private_key> --broadcast --verify
 ```
 
 ### Cast
