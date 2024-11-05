@@ -2,7 +2,7 @@
 pragma solidity ^0.8.13;
 
 import {Script, console} from "forge-std/Script.sol";
-import { Sender } from "../src/Sender.sol";
+import { Sender } from "../../src/messageDispatching/Sender.sol";
 
 contract SenderScript is Script {
     function setUp() public {}

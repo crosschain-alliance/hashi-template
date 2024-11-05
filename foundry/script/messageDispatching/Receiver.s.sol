@@ -2,7 +2,7 @@
 pragma solidity ^0.8.13;
 
 import {Script, console} from "forge-std/Script.sol";
-import { Receiver } from "../src/Receiver.sol";
+import { Receiver } from "../../src/messageDispatching/Receiver.sol";
 
 contract SenderScript is Script {
     function setUp() public {}

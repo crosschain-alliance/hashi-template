@@ -39,7 +39,7 @@ $ anvil
 Configure parameters in .env. Run script
 
 ```shell
-$ forge script script/$ContractName.s.sol: --rpc-url <your_rpc_url> --private-key <your_private_key> --broadcast --verify
+$ forge script script/$ContractName.s.sol --rpc-url <your_rpc_url> --private-key <your_private_key> --broadcast --verify
 ```
 
 ### Cast

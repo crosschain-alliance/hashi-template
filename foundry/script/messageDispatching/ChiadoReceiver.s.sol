@@ -2,7 +2,7 @@
 pragma solidity ^0.8.13;
 
 import {Script, console} from "forge-std/Script.sol";
-import { ChiadoReceiver } from "../src/ChiadoReceiver.sol";
+import { ChiadoReceiver } from "../../src/messageDispatching/ChiadoReceiver.sol";
 
 contract SenderScript is Script {
     function setUp() public {}

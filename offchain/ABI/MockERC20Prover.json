@@ -1,0 +1,234 @@
+{
+    "abi":
+    [
+        {
+            "inputs": [
+                {
+                    "internalType": "address",
+                    "name": "hashiProver_",
+                    "type": "address"
+                },
+                {
+                    "internalType": "address",
+                    "name": "erc20Contract_",
+                    "type": "address"
+                },
+                {
+                    "internalType": "uint256",
+                    "name": "chainID_",
+                    "type": "uint256"
+                }
+            ],
+            "stateMutability": "nonpayable",
+            "type": "constructor"
+        },
+        {
+            "anonymous": false,
+            "inputs": [
+                {
+                    "indexed": true,
+                    "internalType": "uint256",
+                    "name": "chainID",
+                    "type": "uint256"
+                },
+                {
+                    "indexed": false,
+                    "internalType": "bytes",
+                    "name": "rlpEncodedEvent",
+                    "type": "bytes"
+                }
+            ],
+            "name": "TransferEventVerified",
+            "type": "event"
+        },
+        {
+            "anonymous": false,
+            "inputs": [
+                {
+                    "indexed": true,
+                    "internalType": "uint256",
+                    "name": "chainID",
+                    "type": "uint256"
+                },
+                {
+                    "indexed": true,
+                    "internalType": "address",
+                    "name": "erc20Contract",
+                    "type": "address"
+                },
+                {
+                    "indexed": true,
+                    "internalType": "uint256",
+                    "name": "totalSupply",
+                    "type": "uint256"
+                }
+            ],
+            "name": "totalSupplyFromERC20",
+            "type": "event"
+        },
+        {
+            "inputs": [],
+            "name": "chainID",
+            "outputs": [
+                {
+                    "internalType": "uint256",
+                    "name": "",
+                    "type": "uint256"
+                }
+            ],
+            "stateMutability": "view",
+            "type": "function"
+        },
+        {
+            "inputs": [],
+            "name": "erc20Contract",
+            "outputs": [
+                {
+                    "internalType": "address",
+                    "name": "",
+                    "type": "address"
+                }
+            ],
+            "stateMutability": "view",
+            "type": "function"
+        },
+        {
+            "inputs": [],
+            "name": "hashiProver",
+            "outputs": [
+                {
+                    "internalType": "contract HashiProver",
+                    "name": "",
+                    "type": "address"
+                }
+            ],
+            "stateMutability": "view",
+            "type": "function"
+        },
+        {
+            "inputs": [
+                {
+                    "components": [
+                        {
+                            "internalType": "uint256",
+                            "name": "chainId",
+                            "type": "uint256"
+                        },
+                        {
+                            "internalType": "uint256",
+                            "name": "blockNumber",
+                            "type": "uint256"
+                        },
+                        {
+                            "internalType": "bytes",
+                            "name": "blockHeader",
+                            "type": "bytes"
+                        },
+                        {
+                            "internalType": "uint256",
+                            "name": "ancestralBlockNumber",
+                            "type": "uint256"
+                        },
+                        {
+                            "internalType": "bytes[]",
+                            "name": "ancestralBlockHeaders",
+                            "type": "bytes[]"
+                        },
+                        {
+                            "internalType": "address",
+                            "name": "account",
+                            "type": "address"
+                        },
+                        {
+                            "internalType": "bytes[]",
+                            "name": "accountProof",
+                            "type": "bytes[]"
+                        },
+                        {
+                            "internalType": "bytes32",
+                            "name": "storageHash",
+                            "type": "bytes32"
+                        },
+                        {
+                            "internalType": "bytes32[]",
+                            "name": "storageKeys",
+                            "type": "bytes32[]"
+                        },
+                        {
+                            "internalType": "bytes[][]",
+                            "name": "storageProof",
+                            "type": "bytes[][]"
+                        }
+                    ],
+                    "internalType": "struct IHashiProver.AccountAndStorageProof",
+                    "name": "proof",
+                    "type": "tuple"
+                }
+            ],
+            "name": "readTotalSupply",
+            "outputs": [],
+            "stateMutability": "nonpayable",
+            "type": "function"
+        },
+        {
+            "inputs": [
+                {
+                    "components": [
+                        {
+                            "internalType": "uint256",
+                            "name": "chainId",
+                            "type": "uint256"
+                        },
+                        {
+                            "internalType": "uint256",
+                            "name": "blockNumber",
+                            "type": "uint256"
+                        },
+                        {
+                            "internalType": "bytes",
+                            "name": "blockHeader",
+                            "type": "bytes"
+                        },
+                        {
+                            "internalType": "uint256",
+                            "name": "ancestralBlockNumber",
+                            "type": "uint256"
+                        },
+                        {
+                            "internalType": "bytes[]",
+                            "name": "ancestralBlockHeaders",
+                            "type": "bytes[]"
+                        },
+                        {
+                            "internalType": "bytes[]",
+                            "name": "receiptProof",
+                            "type": "bytes[]"
+                        },
+                        {
+                            "internalType": "bytes",
+                            "name": "transactionIndex",
+                            "type": "bytes"
+                        },
+                        {
+                            "internalType": "uint256",
+                            "name": "logIndex",
+                            "type": "uint256"
+                        }
+                    ],
+                    "internalType": "struct IHashiProver.ReceiptProof",
+                    "name": "proof",
+                    "type": "tuple"
+                },
+                {
+                    "internalType": "bytes",
+                    "name": "expectedRlpEncodedEvent",
+                    "type": "bytes"
+                }
+            ],
+            "name": "verifyTransferEvent",
+            "outputs": [],
+            "stateMutability": "nonpayable",
+            "type": "function"
+        }
+    ]
+}

@@ -22,7 +22,8 @@ To get the oracle(reporter & adapter) addresses, check out [here](https://crossc
 1. Hardhat: Template using Hardhat. Consist of contracts, deploy scripts, and configuration.
 2. Foundry: Template using Foundry. Consist of contracts, deploy scripts, and configuration.
 
-# Reference
+# Reference & Tool
 
 1. Hashi documentation: https://crosschain-alliance.gitbook.io/hashi
 2. Hashi repository: https://github.com/gnosis/hashi/
+3. Hashi Explorer: https://hashi-explorer.xyz/

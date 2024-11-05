@@ -29,5 +29,14 @@ module.exports = {
       },
     ],
   },
-  solidity: "0.8.27",
+  solidity: {
+    version: "0.8.25",
+    settings: {
+      viaIR: true,
+      optimizer: {
+        enabled: true,
+        runs: 200,
+      },
+    },
+  },
 };
