@@ -3,6 +3,7 @@ import { http, createWalletClient, publicActions } from "viem";
 import { gnosisChiado } from "viem/chains";
 import { privateKeyToAccount } from "viem/accounts";
 import ABI from "../ABI/MockERC20Prover.json" assert { type: "json" };
+import "dotenv/config";
 
 // This script illustrates how to verify a Transfer event happened on MockERC20 contract from Sepolia on Gnosis Chiado MockERC20Prover contract
 const main = async () => {
